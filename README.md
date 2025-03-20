@@ -4,7 +4,7 @@
 Bank-App-Security-Consultant-Services-landing-page-using-tailwindCSS.
 ## 🌐 Live Demo
 Check out the live version of this project here:  
-👉 [Live Demo] (https://your-netlify-link.netlify.app/)
+👉 [Live Demo] (https://banksecurityconsultant.netlify.app/)
 
 ## 📸 Screenshots
 
