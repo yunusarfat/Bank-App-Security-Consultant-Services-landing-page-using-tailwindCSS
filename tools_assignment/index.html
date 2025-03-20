@@ -1,0 +1,377 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Dev Space</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    bg-gradient-to-r from-teal-400 to-green-500 text-white fixed w-full z-10
+    top-0 shadow-lg
+    <header
+      class="bg-gradient-to-r from-teal-400 to-green-500 text-white fixed w-full z-10 top-0 shadow-lg"
+    >
+      <div
+        class="container mx-auto px-4 py-6 flex justify-between items-center"
+      >
+        <div class="flex items-center">
+          <i class="fas fa-rocket text-2xl mr-2"> </i>
+          <span class="text-xl font-bold"> SecureBank Solutions </span>
+        </div>
+        <nav class="space-x-6">
+          <a class="hover:text-black" href="#whatwe"> What we do </a>
+          <a class="hover:text-black" href="#pay"> How we work </a>
+          <a class="hover:text-black" href="#pay"> Pricing </a>
+          <a class="hover:text-black" href="#team"> Our Team </a>
+          <a
+            class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded"
+            href="#"
+          >
+            Download
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!--hero section-->
+
+    <section class="bg-teal-400 text-white py-20 overflow-hidden relative">
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row items-center"
+      >
+        <div class="md:w-1/2">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">
+            <span class="font-serif text-3xl"
+              >Smart Security for Smarter Banking</span
+            >
+            <br />
+            Bank App Security
+            <br />
+            Consultant Services
+          </h1>
+          <p class="mb-6">
+            At SecureBank Solutions, we specialize in securing banking
+            applications by providing top-tier cybersecurity solutions tailored
+            for financial institutions.
+          </p>
+          <a
+            class="bg-blue-700 hover:bg-blue-800 text-white py-3 px-6 rounded"
+            href="#"
+          >
+            START A PROJECT TODAY
+          </a>
+        </div>
+
+        <div class="md:w-1/2 mt-10 md:mt-0 rounded-lg relative">
+          <!-- Slider Drawer -->
+          <div class="overflow-hidden relative">
+            <div
+              id="slider"
+              class="flex transition-transform duration-1000 ease-in-out"
+            >
+              <!-- Slide 1 -->
+              <div class="w-full flex-shrink-0">
+                <img
+                  alt="Team working on security project"
+                  height="400"
+                  src="images/b.jpg"
+                  width="600"
+                  class="max-w-full rounded-lg overflow-hidden h-auto object-cover"
+                />
+              </div>
+              <!-- Slide 2 -->
+
+              <div
+                class="w-full flex-shrink-0 bg-gradient-to-r from-teal-400 via-indigo-400 to-teal-400 p-12 rounded-lg shadow-xl text-white"
+              >
+                <div class="max-w-full rounded-lg overflow-hidden h-auto">
+                  <h2 class="text-4xl font-extrabold mb-6 text-center">
+                    Bank App Security Consultant
+                  </h2>
+                  <p class="text-lg mb-6 text-center">
+                    Our team of expert consultants provides tailored security
+                    solutions that safeguard your data and build trust with your
+                    users.
+                  </p>
+
+                  <div class="space-y-6">
+                    <div>
+                      <h3 class="text-2xl font-semibold">Why Choose Us?</h3>
+                      <ul class="list-disc pl-6">
+                        <li>
+                          In-depth Security Audits to identify vulnerabilities
+                        </li>
+                        <li>
+                          Implementation of End-to-End Encryption for all
+                          transactions
+                        </li>
+                        <li>
+                          Customized Security Strategies for mobile and web
+                          banking apps
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 class="text-2xl font-semibold">Our Approach</h3>
+                      <p class="text-lg">
+                        We adopt a comprehensive approach to security that
+                        includes risk analysis, penetration testing, and
+                        proactive solutions to ensure your app is protected
+                        against modern cyber threats.
+                      </p>
+                    </div>
+
+                    <div class="text-center">
+                      <button
+                        class="bg-white text-blue-600 px-8 py-3 rounded-full text-xl shadow-lg hover:bg-blue-100 transition duration-300 ease-in-out"
+                      >
+                        Request a Consultation
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--ENDSLIDE -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll("#slider > div");
+      const totalSlides = slides.length;
+
+      function showNextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        const offset = -currentSlide * 100; // Slide width
+        document.getElementById(
+          "slider"
+        ).style.transform = `translateX(${offset}%)`;
+      }
+
+      // Change slide every 3 seconds
+      setInterval(showNextSlide, 2000);
+    </script>
+
+
+
+
+    <section id="whatwe" class="bg-gray-200 py-20">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-gray-500 mb-10 font-bold">What We Do</h2>
+        <div
+          class="flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-10"
+        >
+          <div class="md:w-1/3">
+            <i class="fas fa-lock text-4xl text-blue-500 mb-4"> </i>
+            <h3 class="text-xl font-bold mb-2">Data Encryption</h3>
+            <p class="text-gray-600 mb-4">
+              Protecting sensitive customer data with cutting-edge encryption.
+            </p>
+            <a class="text-blue-500 hover:underline" href="#"> Learn more </a>
+          </div>
+
+          <div class="md:w-1/3">
+            <i class="fas fa-shield-virus text-4xl text-blue-500 mb-4"> </i>
+            <h3 class="text-xl font-bold mb-2">Safe Web</h3>
+            <p class="text-gray-600 mb-4">
+              Implementing AI-driven systems to mitigate unauthorized access.
+            </p>
+            <a class="text-blue-500 hover:underline" href="#"> Learn more </a>
+          </div>
+          <div class="md:w-1/3">
+            <i class="fas fa-laptop-code text-4xl text-blue-500 mb-4"> </i>
+            <h3 class="text-xl font-bold mb-2">Software Development</h3>
+            <p class="text-gray-600 mb-4">
+              Ensuring your app meets industry standards (PCI DSS, GDPR, ISO
+              27001).
+            </p>
+            <a class="text-blue-500 hover:underline" href="#"> Learn more </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How We Work Section -->
+    <section id="pay" class="bg-blue-900 text-white text-center py-16">
+      <h2 class="text-sm uppercase mb-4 font-bold">How We Work</h2>
+      <h1 class="text-3xl font-bold mb-8">
+        Let us
+        <span class="text-teal-400"> help you build a resilient, </span>
+        , use
+        <span class="text-teal-400"> future-proof banking app </span>
+        .
+      </h1>
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Pro Plan -->
+        <div class="bg-white text-black p-8 rounded-lg shadow-lg">
+          <h3 class="text-xl font-bold mb-4">PRO</h3>
+          <p class="text-4xl font-bold mb-4">
+            $2500
+            <span class="text-lg font-normal"> / month </span>
+          </p>
+          <p class="mb-4">10 billable hours included per month.</p>
+          <p class="mb-4">
+            Billable hourly rate of
+            <span class="font-bold"> $300 </span>
+            after the included 10 hours are utilized.
+          </p>
+          <p class="mb-4">24/7/365 on-call and 99.9% SLA</p>
+          <p class="mb-4">Communication via ticketing system and e-mail.</p>
+          <button class="bg-black text-white py-2 px-4 rounded">
+            Contact Us
+          </button>
+        </div>
+        <!-- Premium Plan -->
+        <div class="bg-white text-black p-8 rounded-lg shadow-lg">
+          <h3 class="text-xl font-bold mb-4">PREMIUM</h3>
+          <p class="text-4xl font-bold mb-4">
+            $5000
+            <span class="text-lg font-normal"> / month </span>
+          </p>
+          <p class="mb-4">10 billable hours included per month.</p>
+          <p class="mb-4">
+            Billable hourly rate of
+            <span class="font-bold"> $300 </span>
+            after the included 10 hours are utilized.
+          </p>
+          <p class="mb-4">24/7/365 on-call and 99.9% SLA</p>
+          <p class="mb-4">Communication via ticketing system and e-mail.</p>
+          <button class="bg-black text-white py-2 px-4 rounded">
+            Contact Us
+          </button>
+        </div>
+        <!-- Enterprise Plan -->
+        <div class="bg-white text-black p-8 rounded-lg shadow-lg">
+          <h3 class="text-xl font-bold mb-4">ENTERPRISE</h3>
+          <p class="text-4xl font-bold mb-4">
+            $15000
+            <span class="text-lg font-normal"> / month </span>
+          </p>
+          <p class="mb-4">10 billable hours included per month.</p>
+          <p class="mb-4">
+            Billable hourly rate of
+            <span class="font-bold"> $300 </span>
+            after the included 10 hours are utilized.
+          </p>
+          <p class="mb-4">24/7/365 on-call and 99.9% SLA</p>
+          <p class="mb-4">Communication via ticketing system and e-mail.</p>
+          <button class="bg-black text-white py-2 px-4 rounded">
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet Our Team Section -->
+    <section id="team" class="bg-gray-100 text-center py-16">
+      <h2 class="text-sm uppercase mb-4 font-bold">Meet Our Team</h2>
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Team Member 1 -->
+        <div>
+          <img
+            alt="Portrait of John Doe, DevOps"
+            class="rounded-full mx-auto mb-4"
+            height="150"
+            src="images/iron.jpeg"
+            width="150"
+          />
+          <h3 class="text-xl font-bold">super-hero</h3>
+          <p class="text-gray-600">he can everything</p>
+        </div>
+        <!-- Team Member 2 -->
+        <div>
+          <img
+            alt="Portrait of Tinh Nguyen, Designer"
+            class="rounded-full mx-auto mb-4"
+            height="150"
+            src="images/dr.jpeg"
+            width="200"
+          />
+          <h3 class="text-xl font-bold">doctor</h3>
+          <p class="text-gray-600">Best ever scientist</p>
+        </div>
+        <!-- Team Member 3 -->
+        <div>
+          <img
+            alt="Portrait of Maria Ote, Developer"
+            class="rounded-full mx-auto mb-4"
+            height="150"
+            src="images/aladin.jpeg"
+            width="115"
+          />
+          <h3 class="text-xl font-bold">Aladin</h3>
+          <p class="text-gray-600">You just command</p>
+        </div>
+      </div>
+    </section>
+    <!-- Open Source Section -->
+    <section class="text-center py-16">
+      <h2 class="text-sm uppercase mb-4">We love Open Source</h2>
+      <div class="flex justify-center mb-4">
+        <i class="fas fa-flag text-4xl"> </i>
+      </div>
+      <h1 class="text-3xl font-bold mb-8">We're making Open Source Software</h1>
+      <button class="bg-gray-200 text-black py-2 px-4 rounded">
+        Follow us on GitHub
+      </button>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8">
+      <div
+        class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left"
+      >
+        <!-- Services -->
+        <div>
+          <h3 class="text-lg font-bold mb-4">Services</h3>
+          <ul>
+            <li>DevOps</li>
+            <li>Development</li>
+            <li>Consultant</li>
+          </ul>
+        </div>
+        <!-- Clients -->
+        <div>
+          <h3 class="text-lg font-bold mb-4">Clients</h3>
+          <ul>
+            <li>spider man</li>
+            <li>Thor</li>
+            <li>arfat</li>
+          </ul>
+        </div>
+        <!-- Contact Us -->
+        <div>
+          <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+          <ul>
+            <li>mdarfatyunus@gmail.com</li>
+            <li>Twitter</li>
+            <li>GitHub</li>
+          </ul>
+        </div>
+        <!-- Copyright -->
+        <div>
+          <h3 class="text-lg font-bold mb-4">Copyright</h3>
+          <ul>
+            <li>Free Streamline icons</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
